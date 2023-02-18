@@ -1,0 +1,25 @@
+.navBar {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border-bottom: 2px solid;
+  background-color: rgb(238, 234, 234);
+  box-shadow: 0px 5px 10px grey;
+}
+
+.navLink {
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+  font-weight: 500;
+}
+
+.navLink:global(.active) {
+  color: rgb(211, 47, 47);
+  font-weight: bold;
+}
+
+.navLink:hover {
+  color: black;
+}

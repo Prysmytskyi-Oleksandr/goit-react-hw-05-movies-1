@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+}
+.infMovie {
+  display: flex;
+  gap: 40px;
+}
+
+.btn {
+  width: 80px;
+}
+
+.list {
+  list-style: none;
+}
+
+.navLink {
+  color: blue;
+}
+
+.navLink:global(.active) {
+  color: red;
+}

@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.input {
+  width: 400px;
+}
+
+.btnInput {
+  cursor: pointer;
+}
