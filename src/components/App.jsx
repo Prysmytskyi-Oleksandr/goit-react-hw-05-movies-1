@@ -14,28 +14,30 @@ const NotFoundPage = lazy(() => import('pages/NotFoundPage'));
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <nav className={styles.navBar}>
-        <NavLink to="/" className={styles.navLink}>
-          Home
-        </NavLink>
-        <NavLink to="/movies" className={styles.navLink}>
-          Movies
-        </NavLink>
-      </nav>
+    <>
+      <BrowserRouter basename="goit-react-hw-05-movies-1">
+        <nav className={styles.navBar}>
+          <NavLink to="/" className={styles.navLink}>
+            Home
+          </NavLink>
+          <NavLink to="/movies" className={styles.navLink}>
+            Movies
+          </NavLink>
+        </nav>
 
-      <Suspense fallback={<p>...loading</p>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/movies" element={<MoviesPage />} />
+        <Suspense fallback={<p>...loading</p>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movies" element={<MoviesPage />} />
 
-          <Route path="/movies/:id" element={<MovieDetailsPage />}>
-            <Route path="cast" element={<CastPage />} />
-            <Route path="reviews" element={<ReviewsPage />} />
-          </Route>
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+            <Route path="/movies/:id" element={<MovieDetailsPage />}>
+              <Route path="cast" element={<CastPage />} />
+              <Route path="reviews" element={<ReviewsPage />} />
+            </Route>
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </>
   );
 };
